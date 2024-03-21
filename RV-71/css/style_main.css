@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Quicksand', sans-serif;
+}
+body 
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #000;
+}
+
+section 
+{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2px;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+section::before 
+{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(#000,#0f0,#000);
+	animation: animate 5s linear infinite;
+}
+section .interface	
+{
+	list-style-type: none; /* Supprime les puces de liste */
+    	padding: 0; /* Supprime le remplissage par défaut de la liste */
+    	margin: 0; /* Supprime les marges par défaut de la liste */
+   	display: flex; /* Utilise Flexbox pour aligner les éléments sur une ligne */
+}
+section .interface li
+{
+	margin-right: 10px; /* Ajoute une marge entre les éléments de liste */
+}
+@keyframes animate 
+{
+	0%
+	{
+		transform: translateY(-100%);
+	}
+	100%
+	{
+		transform: translateY(100%);
+	}
+}
+section span 
+{
+	position: relative;
+	display: block;
+	width: calc(6.25vw - 2px);
+	height: calc(6.25vw - 2px);
+	background: #181818;
+	z-index: 2;
+	transition: 1.5s;
+}
+section span:hover 
+{
+	background: #0f0;
+	transition: 0s;
+}
+@media (max-width: 900px)
+{
+	section span 
+	{
+		width: calc(10vw - 2px);
+		height: calc(10vw - 2px);
+	}
+}
+@media (max-width: 600px)
+{
+	section span 
+	{
+		width: calc(20vw - 2px);
+		height: calc(20vw - 2px);
+	}
+}
+section .tâches
+{
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	width: 400px;
+ 	background: #222;  
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 40px;
+	border-radius: 4px;
+	box-shadow: 0 15px 35px rgba(0,0,0,9);
+}
+section .tâches .content 
+{
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 40px;
+}
+section .tâches .content #Initial 
+{
+	font-size: 2em;
+	color: #0f0;
+	
+}
+section .inf_pers
+{
+	position: absolute;
+	top: 160px;
+	left: 20px;
+	width: 400px;
+	height: 500px;
+  	background: #222;  
+	z-index: 1000;
+	padding: 40px;
+	border-radius: 4px;
+	box-shadow: 0 15px 35px rgba(0,0,0,9);
+}
+section .inf_pers p
+{
+	font-size: 1em;
+	color: #0f0;
+}
+section .inf_pers .red 
+{
+	color: #FF0000;
+}
+#white 
+{
+	color: #f4edde; 
+}
+.text-blanc {
+        color: white;
+    }
+/* Carte des Cessions*/
+#map {
+        height: 300px;
+        width: 100%;
+      }
+section .localisation
+{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+  	background: #222;  
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 40px;
+	border-radius: 4px;
+	box-shadow: 0 15px 35px rgba(0,0,0,9);
+	height: 400px;
+	width: 500px;
+}
+section .localisation .content 
+{
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 40px;
+}
+section .localisation .content p
+{
+	font-size: 1em;
+	color: #0f0;
+	
+}
+
+
